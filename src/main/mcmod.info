@@ -1,0 +1,17 @@
+[
+    {
+        "modid": "TheRevival",
+        "name": "The Revival",
+        "version": "1.7.2-1.0",
+        "url": "",
+        "credits": "Fusion-craft.org",
+        "authors": [
+            "FlawlessGecko"
+        ],
+        "description": "Unique Storge and mobs.",
+        "logoFile": "",
+        "updateUrl": "",
+        "parent": "",
+        "screenshots": []
+    }
+]
