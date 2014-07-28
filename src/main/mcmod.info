@@ -2,13 +2,15 @@
     {
         "modid": "TheRevival",
         "name": "The Revival",
-        "version": "1.7.2-1.0",
+        "version": "1.7.10-1.0",
         "url": "",
         "credits": "Fusion-craft.org",
         "authors": [
             "FlawlessGecko"
         ],
-        "description": "Unique Storge and mobs.",
+        "description": "Introducing a way to go back and use some of the simpler stone. 
+        Maybe experience creating fire or the wheel.Wonder what might stalk you. What village
+        Might hold inside.",
         "logoFile": "",
         "updateUrl": "",
         "parent": "",

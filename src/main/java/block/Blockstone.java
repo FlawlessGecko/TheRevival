@@ -1,23 +1,21 @@
-package com.FlawlessGecko.TheRevival;
+package block;
 
+import creativetab.CreativeTabTR;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class Blockstone extends Block {
+public class Blockstone extends BlockTR {
 
 	public Blockstone() {
 		super(Material.rock);
 		
 		this.setBlockName("blockstone");
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(CreativeTabTR.TR_TAB);
 		this.setStepSound(soundTypeStone);
-		this.getCanBlockGrass();
-		this.captureDrops(true);
-		this.blockIIcon();
-		this.setBlockTextureName("TheRevival"+ ":" + "blockstone");
-		this.setBlockName("Granite");
+		this.setBlockTextureName("blockstone");
+		
 	}
 
 	private void blockIIcon() {

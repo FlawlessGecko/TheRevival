@@ -1,12 +1,26 @@
 package com.FlawlessGecko.TheRevival;
 
+import init.ModBlocks;
+import init.ModItems;
+import init.Recipes;
+import handler.ConfigurationHandler;
+import Gen.BlocksGenerator;
+import block.BlockBlackstone;
+import block.BlockLamp;
+import block.Blockstone;
+import block.Blocktile;
+
+import com.FlawlessGecko.TheRevival.proxy.ClientProxy;
 import com.FlawlessGecko.TheRevival.proxy.IProxy;
 import com.FlawlessGecko.TheRevival.reference.Reference;
+import com.FlawlessGecko.TheRevival.utility.LogHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraftforge.oredict.OreDictionary;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -16,8 +30,12 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = Reference.MOD_ID,name =Reference.MOD_NAME,version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID,name =Reference.MOD_NAME,version = Reference.VERSION,guiFactory =Reference.GUI_FACTORY_CLASS)
 public class TheRevival {
+	//nbt stores our data for itemstack like enchant/damage/name tags/books
+	//items stack store the nbt data //named binary tag
+	//nbt stroes extra data like itemstack
+	//nbt Read and writes from disk
 	
 	//Where you find your reference to Mod.
 	@Mod.Instance(Reference.MOD_ID) 
@@ -27,51 +45,49 @@ public class TheRevival {
 	//Handles the Way the code is looked at from server side and client side
 	// Like Rendering is on client and placing blocks on server side.
 	
-	@SidedProxy(clientSide ="com.FlawlessGecko.TheRevival.proxy.ClientProxy",serverSide ="com.FlawlessGecko.TheRevival.proxy.ServerProxy")
+	@SidedProxy(clientSide =Reference.CLIENT_PROXY_CLASS,serverSide =Reference.SERVER_PROXY_CLASS)
 	
 	//IProxy is a way we can Controls where and when the other Proxys are used
 	// Like do we need blocks to render on client side.
 	public static IProxy proxy;
 	
-	// Can be removed to own class meant for seeing blocks in my tab.
-	public static CreativeTabs RevivalTab = new CreativeTabs("Revival"){
-
-		@Override
-		public Item getTabIconItem() {
-			
-			return Items.beef;
-		}
-		
-	};
+	public static BlocksGenerator worldGen = new BlocksGenerator();
 	
-	
-	public static Block blocklamp;
-	public static Block blockstone;
-	public static Block blockblackstone;	
 	//Registration of Blocks and Items.Also network.
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event){
+		//Loads The config for blocks,items,
+		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+		LogHelper.info("Pre Initialization Complete");
 		
-		blockstone = new Blockstone();
-		blockblackstone =new BlockBlackstone();
-		blocklamp = new BlockLamp();
+		proxy.registerRenderThings();
+		ModItems.init();
+		ModBlocks.init();
 		
-		GameRegistry.registerBlock(blockblackstone, "blockblackstone").setCreativeTab(RevivalTab);
-		GameRegistry.registerBlock(blockstone, "blockstone").setCreativeTab(RevivalTab);
-		GameRegistry.registerBlock(blocklamp, "blocklamp").setCreativeTab(RevivalTab);
+		
+		//move these to ModBlocks
+		
+		GameRegistry.registerWorldGenerator(worldGen, 1);
+		
 	}
-	//Gui's,recipes.TileEntities.
+	//Gui and handlers
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event){
-		
-		
+		Recipes.init();
+		LogHelper.info("Initialization Complete");
 		
 	}
 	// wrap up and checking after other Mods have loaded.
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event){
 	
+		LogHelper.info("Post Initialization Complete");
+		//gets all names of currenly register blocks
 		
-		
+		/*for(String oreName : OreDictionary.getOreNames()){
+			LogHelper.info(oreName);
+		}
+		*/
 	}
 }

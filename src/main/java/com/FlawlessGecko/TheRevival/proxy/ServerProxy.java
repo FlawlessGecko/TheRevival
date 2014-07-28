@@ -5,4 +5,17 @@ package com.FlawlessGecko.TheRevival.proxy;
 
 public class ServerProxy extends CommonProxy {
 
+	@Override
+	public void registerRenderThings() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void registerTileEntitySpecialRenderer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 }

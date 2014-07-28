@@ -1,4 +1,17 @@
 itemGroup.Revival=The Revival
 tile.Granite.name=Granite
-tile.Blackmarble.name=Black Marble
-tile.blocklamp.name= Swamp Light
+tile.therivival:blockglass.name=Natural Glass
+tile.therevival:blockblackstone.name=Black Marble
+tile.therevival:blocklamp.name=Swamp Light
+tile.therevival:blocktile.name=Tile floor
+tile.therevival:blockbrick.name=Block of brick
+tile.therevival:blockfence.name= Oak low fence
+tile.therevival:blockstone.name=Granite
+tile.therevival:blockjasper.name=Jasper Ore
+tile.therevival:blockleather.name=Block of leather
+tile.therevival:blockstoneybrick.name=Tan brick
+tile.therevival:BlockSapphire.name=Block Sapphire
+//items
+item.therevival:leafpoker.name=Leaf Poker
+item.therevival:jasper.name=Jasper
+itemGroup.therevival=The Revival
