@@ -1,8 +1,8 @@
 package com.FlawlessGecko.TheRevival.client;
 
+import com.FlawlessGecko.TheRevival.handler.ConfigurationHandler;
 import com.FlawlessGecko.TheRevival.reference.Reference;
 
-import handler.ConfigurationHandler;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
