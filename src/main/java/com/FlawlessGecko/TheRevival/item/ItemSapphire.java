@@ -6,5 +6,6 @@ public class ItemSapphire extends ItemTR {
 	this.setTextureName("sapphire");
 	this.setUnlocalizedName("sapphire");
 	this.setMaxStackSize(16);
+	this.setFull3D();
 }
 }

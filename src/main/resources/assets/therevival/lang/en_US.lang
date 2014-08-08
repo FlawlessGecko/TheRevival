@@ -4,14 +4,27 @@ tile.therivival:blockglass.name=Natural Glass
 tile.therevival:blockblackstone.name=Black Marble
 tile.therevival:blocklamp.name=Swamp Light
 tile.therevival:blocktile.name=Tile floor
-tile.therevival:blockbrick.name=Block of brick
-tile.therevival:blockfence.name= Oak low fence
+tile.therevival:blockbrick.name=Black Marble Bricks
+tile.therevival:blockfence.name= Wood Paver
 tile.therevival:blockstone.name=Granite
 tile.therevival:blockjasper.name=Jasper Ore
 tile.therevival:blockleather.name=Block of leather
-tile.therevival:blockstoneybrick.name=Tan brick
+tile.therevival:blockstoneybrick.name=Decomposed Granite brick
 tile.therevival:BlockSapphire.name=Block Sapphire
+tile.therevival:blockdecomposedgranite.name=Decomposed Granite
+tile.therevival:blocksmoothrock.name=Smooth Rock
+tile.therevival:blocksapphireore.name=Sapphire Ore
+tile.therevival:blockzombieflesh.name=Hunk of Zombie
+tile.therevival:blocklampwood.name=Wood Lamp
+tile.therevival:blocklampstone.name=Stone Lamp
+tile.therevival:blockpaver.name=Paver
+
+
 //items
 item.therevival:leafpoker.name=Leaf Poker
 item.therevival:jasper.name=Jasper
+item.therevival:sapphire.name=Sapphire
+item.therevival:woodmallet.name=Wood mallet 
+
+
 itemGroup.therevival=The Revival

@@ -15,6 +15,7 @@ public class ItemTR extends Item {
 	
 		super();
 		this.setCreativeTab(CreativeTabTR.TR_TAB);
+		
 	}
 	  @Override
 	    public String getUnlocalizedName()

@@ -1,15 +1,14 @@
 package com.FlawlessGecko.TheRevival;
 
-import init.ModBlocks;
-import init.ModItems;
-import init.Recipes;
-import handler.ConfigurationHandler;
-import Gen.BlocksGenerator;
-import block.BlockBlackstone;
-import block.BlockLamp;
-import block.Blockstone;
-import block.Blocktile;
-
+import com.FlawlessGecko.TheRevival.Gen.BlocksGenerator;
+import com.FlawlessGecko.TheRevival.block.BlockBlackstone;
+import com.FlawlessGecko.TheRevival.block.BlockLamp;
+import com.FlawlessGecko.TheRevival.block.Blockstone;
+import com.FlawlessGecko.TheRevival.block.Blocktile;
+import com.FlawlessGecko.TheRevival.handler.ConfigurationHandler;
+import com.FlawlessGecko.TheRevival.init.ModBlocks;
+import com.FlawlessGecko.TheRevival.init.ModItems;
+import com.FlawlessGecko.TheRevival.init.Recipes;
 import com.FlawlessGecko.TheRevival.proxy.ClientProxy;
 import com.FlawlessGecko.TheRevival.proxy.IProxy;
 import com.FlawlessGecko.TheRevival.reference.Reference;

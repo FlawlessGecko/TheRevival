@@ -12,7 +12,7 @@ public class CreativeTabTR {
 public static final CreativeTabs TR_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase()){
 	@Override
 	public Item getTabIconItem(){
-		return ModItems.ItemLeafpoker;
+		return ModItems.ItemLeafPoker;
 
 }
 };

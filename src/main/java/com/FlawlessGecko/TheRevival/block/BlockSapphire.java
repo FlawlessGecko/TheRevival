@@ -9,6 +9,7 @@ public class BlockSapphire extends BlockTR {
 		this.setBlockName("BlockSapphire");
 		this.setBlockTextureName("BlockSapphire");
 		this.getCanBlockGrass();
+		this.setHardness(4.0f);
 		
 	}
 	

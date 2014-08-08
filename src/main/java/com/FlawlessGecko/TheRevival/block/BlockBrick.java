@@ -12,6 +12,7 @@ public class BlockBrick extends BlockTR  {
 		this.setBlockName("blockbrick");
 		this.setBlockTextureName("blockbrick");
 		this.setCreativeTab(CreativeTabTR.TR_TAB);
+		this.setHardness(2.0f);
 	}
 
 	

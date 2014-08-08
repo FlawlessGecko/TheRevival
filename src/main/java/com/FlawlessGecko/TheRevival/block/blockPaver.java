@@ -14,9 +14,10 @@ public class blockPaver extends BlockTR {
 public blockPaver(){
 	this.setBlockName("blockpaver");
 	this.setBlockTextureName("blockpaver");
-	this.setHardness(0.1f);
+	this.setHardness(0.4f);
 	this.setStepSound(soundTypeStone);
-	this.setBlockBounds(0, 0, 0, 1, (float) 0.1, 1);
+	this.setHarvestLevel("pickaxe", 0);
+	this.setBlockBounds(0, 0, 0, 1, (float) 0.2, 1);
 	this.setLightLevel((float) 0.4);
 }
 @Override
