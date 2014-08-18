@@ -18,8 +18,14 @@ tile.therevival:blockzombieflesh.name=Hunk of Zombie
 tile.therevival:blocklampwood.name=Wood Lamp
 tile.therevival:blocklampstone.name=Stone Lamp
 tile.therevival:blockpaver.name=Paver
-
-
+tile.therevival:blockclaypaver.name=Clay Paver
+tile.therevival:blockironpaver.name=Iron Paver
+tile.therevival:blockquartzpaver.name=Quartz Paver
+tile.therevival:grass.name=Block of Grass
+tile.therevival:blockblackstonepillar.name=Blackstone Pillar
+tile.therevival:blockironcover.name=Block Iron Cover Wip
+tile.therevival:blockcrushedcobble.name=Crushed Cobble
+tile.therevival:blockdecomposedcobble.name=Decomposed Cobble
 //items
 item.therevival:leafpoker.name=Leaf Poker
 item.therevival:jasper.name=Jasper

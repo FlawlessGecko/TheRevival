@@ -20,8 +20,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class Blockgrass extends BlockTR {
 	
-	private IIcon[] blockTop, blockSide;
+	private IIcon blockTop, blockSide;
 	 
+	@SideOnly(Side.CLIENT)
+	private IIcon sideicon;
 	
 	public Blockgrass() {
 		super(Material.grass);
@@ -29,6 +31,8 @@ public class Blockgrass extends BlockTR {
 		this.setBlockName("grass");
 		this.setBlockTextureName("grass");
 		this.setStepSound(soundTypeGrass);
+		this.setHarvestLevel("shovel", 1);
+		this.setHardness(8);
 		
 	}
 
@@ -54,22 +58,33 @@ public class Blockgrass extends BlockTR {
 			}
 		}
 	}
+	public boolean func_149851_a(World world, int x, int y, int z, boolean p5)
+    {
+        return true;
+    }
 
+    public boolean func_149852_a(World world, Random random, int x, int y, int z)
+    {
+        return true;
+    }
+    
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_,
 			int p_149650_3_) {
 		return Blocks.dirt.getItemDropped(0, p_149650_2_, p_149650_3_);
 	}
-	   @Override
-	    @SideOnly(Side.CLIENT)
-	    public void registerBlockIcons(IIconRegister iconRegister)
-	    {
-	        this.blockTop = new IIcon[Names.Blocks.BLOCKGRASS.length()];
-	        this.blockSide = new IIcon[Names.Blocks.BLOCKDIRT.length()];
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons (IIconRegister iconRegister)
+	{
+	    this.blockIcon = iconRegister.registerIcon("therevival:grass_top");
+	    this.sideicon = iconRegister.registerIcon("therevival:grass_side");
+	}
+	@Override
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon (int side, int meta)
+	{
+		return side == 1 ? this.blockIcon : (side == 0 ? Blocks.dirt.getBlockTextureFromSide(side) : this.sideicon);
+	}
+}
 
-	        for (int i = 0; i < Names.Blocks.BLOCKGRASS.length(); i++)
-	        {
-	            blockTop[i] = iconRegister.registerIcon(String.format(getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
-	            blockSide[i] = iconRegister.registerIcon(String.format(getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
-	        }
-	    
-}}
+

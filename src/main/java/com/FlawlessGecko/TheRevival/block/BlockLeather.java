@@ -16,12 +16,12 @@ public class BlockLeather extends BlockTR {
 	 super();
 	 this.setBlockName("blockleather");
 	 this.setBlockTextureName("blockleather");
-	 this.getCanBlockGrass();
+
 	 this.blockMaterial(Material.cloth);
-	 this.getAmbientOcclusionLightValue();
+
 	 this.setStepSound(soundTypeCloth);
 	 this.setHarvestLevel("axe", 1);
-	 this.setHardness(1.0f);
+	 this.setHardness(5);
 	 
 	 
 	 

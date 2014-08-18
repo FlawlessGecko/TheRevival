@@ -8,8 +8,8 @@ public class BlockSapphire extends BlockTR {
 		super(Material.rock);
 		this.setBlockName("BlockSapphire");
 		this.setBlockTextureName("BlockSapphire");
-		this.getCanBlockGrass();
-		this.setHardness(4.0f);
+		this.setHarvestLevel("pickaxe", 1);
+		this.setHardness(8);
 		
 	}
 	

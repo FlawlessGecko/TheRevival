@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class BlockLamp extends BlockTR {
 
@@ -17,16 +18,27 @@ public class BlockLamp extends BlockTR {
 		super(Material.glass);
 
 		this.setBlockName("blocklamp");
-		this.setHardness(1);
+		this.setHardness(9);
+		this.setHarvestLevel("pickaxe", 1);
 		this.setStepSound(soundTypeGlass);
-		this.getCanBlockGrass();
+		this.setTickRandomly(true);
 		this.setBlockTextureName("blocklamp");
-		this.setLightLevel(1);
-		this.setLightOpacity(0);
+		this.setLightLevel(1f);
+		
 		this.setCreativeTab(CreativeTabTR.TR_TAB);
-		this.captureDrops();
+		
 	}
-  public boolean captureDrops(){
-	  return true;
-  }
-    }
+	  @SideOnly(Side.CLIENT)
+	    public int getRenderBlockPass()
+	    {
+	        return 1;
+	    }
+	  public boolean isBlockSolidOnSide(World world, int x, int y, int z, ForgeDirection side) {
+			return true;
+		}   
+	  @Override
+	  public boolean isOpaqueCube()
+	  {
+	  	return false;
+	  }
+}

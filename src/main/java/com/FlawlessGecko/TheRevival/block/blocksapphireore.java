@@ -12,7 +12,7 @@ public blocksapphireore(){
 	this.setBlockTextureName("blocksapphireore");
 	this.setBlockName("blocksapphireore");
 	this.isCollidable();
-	this.setHardness(2.0f);
+	this.setHardness(8);
 	this.setHarvestLevel("pickaxe", 2);
 	
 	

@@ -1,7 +1,5 @@
 package com.FlawlessGecko.TheRevival.block;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.potion.Potion;
@@ -9,17 +7,19 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-public class blockPaver extends BlockTR {
-public blockPaver(){
-	this.setBlockName("blockpaver");
-	this.setBlockTextureName("blockpaver");
-	this.setHardness(0.4f);
-	this.setStepSound(soundTypeStone);
-	this.setHarvestLevel("pickaxe", 1);
+public class blockironpaver extends BlockTR {
+public blockironpaver(){
+	this.setBlockName("blockironpaver");
+	this.setBlockTextureName("blockironpaver");
 	this.setHardness(5);
+	this.setStepSound(soundTypeMetal);
+	this.setHarvestLevel("pickaxe", 0);
 	this.setBlockBounds(0, 0, 0, 1, (float) 0.2, 1);
 	this.setLightLevel((float) 0.4);
+	this.useNeighborBrightness = true;
 }
 @Override
 public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity)
@@ -28,7 +28,7 @@ public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity e
 
 	if (entity instanceof EntityLivingBase)
 	{
-		((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 100));
+		((EntityLivingBase)entity).addPotionEffect(new PotionEffect(Potion.nightVision.id, 100));
 		
 	}
 	  
@@ -47,3 +47,4 @@ public boolean isBlockSolidOnSide(World world, int x, int y, int z, ForgeDirecti
 	return true;
 }
 }
+

@@ -28,9 +28,12 @@ public class Blockwoodpaver extends BlockTR {
 		this.setBlockTextureName("blockfence");
 		this.setBlockName("blockfence");
 		this.setStepSound(soundTypeWood);
+		this.setHarvestLevel("axe",1);
+		this.setHardness(5);
 		this.beginLeavesDecay(world, 25, 30, 10);
 		this.setBlockBounds(0, 0, 0, 1, (float) 0.2, 1);
 		this.getItemDropped(Items.stick, 2,5);
+		this.useNeighborBrightness = true;
 		}
 
 	private Item getItemDropped(Item stick, int i, int j) {

@@ -15,7 +15,8 @@ public class BlockBlackstone extends BlockTR {
 		this.setBlockName("blockblackstone");
 		this.setCreativeTab(CreativeTabTR.TR_TAB);
 		this.setStepSound(soundTypeStone);
-		this.getCanBlockGrass();
+		this.setHarvestLevel("pickaxe", 1);
+		this.setHardness(10);
 		this.setBlockTextureName("blockblackstone");
 		this.setBlockName("blockblackstone");
 	}

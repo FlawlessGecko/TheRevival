@@ -17,7 +17,7 @@ public BlockJasperore(){
 	this.setBlockTextureName("blockjasper");
 	this.setBlockName("blockjasper");
 	this.isCollidable();
-	this.setHardness(2.0f);
+	this.setHardness(7);
 	this.setHarvestLevel("pickaxe", 1);
 	
 	

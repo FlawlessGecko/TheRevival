@@ -9,7 +9,7 @@ public class blocksmoothrock extends BlockTR {
 	this.setBlockTextureName("blocksmoothrock");
 	this.setHarvestLevel("pickaxe", 1);
 	this.setStepSound(soundTypeStone);
-	this.getCanBlockGrass();
-	this.setHardness(1.0f);
+
+	this.setHardness(8);
 	}
 }

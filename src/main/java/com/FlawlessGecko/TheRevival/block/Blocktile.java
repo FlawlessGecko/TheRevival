@@ -17,7 +17,8 @@ public class Blocktile extends BlockTR {
 			this.setStepSound(soundTypeStone);
 			this.setBlockTextureName("blocktile");
 			this.setLightOpacity(0);
-			this.setHardness(0.5f);
+			this.setHarvestLevel("pickaxe", 1);
+			this.setHardness(5);
 		}
 
 		private void blockIIcon() {

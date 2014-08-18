@@ -16,7 +16,8 @@ public class Blockstone extends BlockTR {
 		this.setCreativeTab(CreativeTabTR.TR_TAB);
 		this.setStepSound(soundTypeStone);
 		this.setBlockTextureName("blockstone");
-		this.setHardness(1.5f);
+		this.setHarvestLevel("pickaxe", 1);
+		this.setHardness(8);
 		
 	}
 

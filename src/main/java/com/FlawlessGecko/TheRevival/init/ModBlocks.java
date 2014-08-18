@@ -13,16 +13,23 @@ import com.FlawlessGecko.TheRevival.block.BlockSapphire;
 import com.FlawlessGecko.TheRevival.block.BlockTR;
 import com.FlawlessGecko.TheRevival.block.BlockZombieFlesh;
 import com.FlawlessGecko.TheRevival.block.Blockgrass;
+import com.FlawlessGecko.TheRevival.block.Blockironcover;
 import com.FlawlessGecko.TheRevival.block.Blockstone;
 import com.FlawlessGecko.TheRevival.block.Blockstoneybrick;
 import com.FlawlessGecko.TheRevival.block.Blocktile;
 import com.FlawlessGecko.TheRevival.block.Blockwoodpaver;
 import com.FlawlessGecko.TheRevival.block.blockPaver;
+import com.FlawlessGecko.TheRevival.block.blockclaypaver;
+import com.FlawlessGecko.TheRevival.block.blockcrushedcobble;
 import com.FlawlessGecko.TheRevival.block.blockdecomposedgranite;
 import com.FlawlessGecko.TheRevival.block.blocksapphireore;
 import com.FlawlessGecko.TheRevival.block.blocksmoothrock;
 import com.FlawlessGecko.TheRevival.reference.Reference;
 import com.FlawlessGecko.TheRevival.block.blocksmoothrock;
+import com.FlawlessGecko.TheRevival.block.blockironpaver;
+import com.FlawlessGecko.TheRevival.block.blockquartzpaver;
+import com.FlawlessGecko.TheRevival.block.blockblackstonepillar;
+import com.FlawlessGecko.TheRevival.block.Blockdecomposedcobble;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 //Stops tinkering of blocks from other mods.
@@ -40,18 +47,32 @@ public class ModBlocks {
 	public static final BlockTR blockjasperore=new BlockJasperore();
 	public static final BlockTR BlockSapphire=new BlockSapphire();
 	public static final BlockTR blockpaver = new blockPaver();
+	public static final BlockTR blockironpaver = new blockironpaver();
+	public static final BlockTR blockquartzpaver = new blockquartzpaver();
+	public static final BlockTR blockclaypaver=new blockclaypaver();
+	public static final BlockTR blockdecomposedcobble=new Blockdecomposedcobble();
+	public static final BlockTR blockcrushedcobble=new blockcrushedcobble();
+	
+	public static final BlockTR blockblackstonepillar=new blockblackstonepillar();
+	public static final BlockTR blockironcover=new Blockironcover();
 	public static final BlockTR blockdecomposedgranite= new blockdecomposedgranite();
 	public static final BlockTR blocksapphireore=new blocksapphireore();
 	public static final BlockTR blocksmoothrock=new blocksmoothrock();
 	public static final BlockTR Blockgrass = new Blockgrass();
 	public static final BlockTR BlockLampWood = new BlockLampWood();
-	public static final BlockTR doorsnow = new com.FlawlessGecko.TheRevival.block.doorsnow(Material.craftedSnow);
 	public static final BlockTR blocklampstone=new BlockLampStone();
 	public static final BlockTR BlockZombieflesh= new BlockZombieFlesh();
+	
 	//Init is where we store our blocks
 	public static void init(){
+		GameRegistry.registerBlock(blockblackstonepillar, "blockblackstonepillar");
 		GameRegistry.registerBlock(blockbrick,"blockbrick");
+		GameRegistry.registerBlock(blockclaypaver, "blockclaypaver");
 		GameRegistry.registerBlock(blockwoodpaver, "blockwoodpaver");
+		GameRegistry.registerBlock(blockironpaver, "blockironpaver");
+		GameRegistry.registerBlock(blockquartzpaver, "blockquartzpaver");
+		GameRegistry.registerBlock(blockironcover, "blockironcover");
+		GameRegistry.registerBlock(blockdecomposedcobble, "blockdecomposedcobble");
 		GameRegistry.registerBlock(blockblackstone, "blockblackstone");
 		GameRegistry.registerBlock(blockstone, "blockstone");
 		GameRegistry.registerBlock(blocklamp, "blocklamp");
@@ -68,6 +89,7 @@ public class ModBlocks {
 		GameRegistry.registerBlock(BlockLampWood, "BlockLampWood");
 		GameRegistry.registerBlock(blocklampstone, "blocklampstone");
 		GameRegistry.registerBlock(BlockZombieflesh, "BlockZombieflesh");
-		GameRegistry.registerBlock(doorsnow, "doorsnow");
+		GameRegistry.registerBlock(blockcrushedcobble, "blockcrushedcobble");
+		
 	}
 }

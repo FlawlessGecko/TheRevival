@@ -2,6 +2,8 @@ package com.FlawlessGecko.TheRevival.item;
 
 import java.util.List;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import ibxm.Player;
@@ -13,36 +15,55 @@ public class Itemwoodmallet extends ItemTR {
 		this.setFull3D();
 		this.setHarvestLevel("pickaxe", 2);
 		this.setMaxStackSize(1);
-		this.setMaxDamage(56);
+		this.setMaxDamage(128);
+		this.setNoRepair();
 		
 		
 	
 	
 	}
+	 @SideOnly(Side.CLIENT)
+	    public boolean isFull3D()
+	    {
+	        return this.bFull3D;
+	    }
 	  public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par4)
 	    {
 	    	List.add("Used for blocks");
+	    	
+	    }
 
-	    }
-	  public boolean showDurabilityBar(ItemStack stack)
-	    {
-	        return stack.isItemDamaged();
-	    }
-	  public boolean isDamaged(ItemStack stack)
-	    {
-	        return stack.getItemDamage() > 0;
-	    }
-	  public double getDurabilityForDisplay(ItemStack stack)
-	    {
-	        return (double)stack.getItemDamageForDisplay() / (double)stack.getMaxDamage();
-	    }
-	   public void setDamage(ItemStack stack, int damage)
-	    {
-	        stack.setItemDamage(damage);
+	    	   @SideOnly(Side.CLIENT)
+	    	    public boolean hasEffect(ItemStack par1ItemStack)           
+	    	    {
+	    	        return true;
+	    	    }
+	    	   
+	    	   
+	    	    @Override
+	    	    public boolean doesContainerItemLeaveCraftingGrid(ItemStack itemStack)
+	    	    {
+	    	        return false;
+	    	    }
 
-	        if (stack.getItemDamage() < 0)
-	        {
-	            stack.setItemDamage(0);
-	        }
-	    }
-}
+	    	    @Override
+	    	    public boolean getShareTag()
+	    	    {
+	    	        return true;
+	    	    }
+
+	    	    public boolean hasContainerItem(ItemStack itemStack)
+	    	    {
+	    	       return true;
+	    	    }
+	    	    @Override
+	    	    public ItemStack getContainerItem(ItemStack itemStack)
+	    	    {
+	    	        ItemStack stack = itemStack.copy();
+
+	    	        stack.setItemDamage(stack.getItemDamage() + 1);
+	    	        stack.stackSize = 1;
+
+	    	        return stack;
+	    	    }
+	    	}

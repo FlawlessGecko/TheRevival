@@ -13,11 +13,10 @@ public class BlockZombieFlesh extends BlockTR {
 public BlockZombieFlesh(){
 	this.setBlockTextureName("blockzombieflesh");
 	this.setBlockName("blockzombieflesh");
-	this.getCanBlockGrass();
 	this.setStepSound(soundTypeStone);
 	this.setTickRandomly(true);
-	this.getAmbientOcclusionLightValue();
-	this.setHardness(1.0f);
+	this.setHarvestLevel("pickaxe",1);
+	this.setHardness(7);
 }
 
 public boolean canCreatureSpawn(EntityZombie entity,World world){
