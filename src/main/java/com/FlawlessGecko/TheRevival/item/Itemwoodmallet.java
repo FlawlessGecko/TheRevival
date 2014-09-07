@@ -29,7 +29,7 @@ public class Itemwoodmallet extends ItemTR {
 	    }
 	  public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par4)
 	    {
-	    	List.add("Used for blocks");
+	    	List.add("Used for crafting");
 	    	
 	    }
 
@@ -63,7 +63,7 @@ public class Itemwoodmallet extends ItemTR {
 
 	    	        stack.setItemDamage(stack.getItemDamage() + 1);
 	    	        stack.stackSize = 1;
-
+	    	        
 	    	        return stack;
 	    	    }
 	    	}

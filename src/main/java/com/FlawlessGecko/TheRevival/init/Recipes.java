@@ -33,7 +33,7 @@ GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.BlockLeather),"lll","lll","
 GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.BlockZombieflesh),"zxz","zxz","zxz",'z',new ItemStack(Items.rotten_flesh),'x',new ItemStack(ModBlocks.blocksmoothrock));
 GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.BlockSapphire),"rrr","rrr","rrr",'r',new ItemStack(ModItems.sapphire));
 GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.Blockgrass,2), new ItemStack(Blocks.grass),new ItemStack(Blocks.grass));
-
+GameRegistry.addSmelting(ModBlocks.blockoakpanel, new ItemStack (ModBlocks.blockblackendoak), 4);
 
 //Used with Wood mallet
 GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockcrushedcobble, 1), new ItemStack(Blocks.cobblestone), new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
@@ -43,6 +43,13 @@ GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockblackstonepillar),n
 GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blocklamp,1), new ItemStack(Blocks.torch),new ItemStack(Blocks.glass),new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
 GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockbrick,4),"b b"," l ","b b",'b',new ItemStack(ModBlocks.blockblackstone),'l',new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
 GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockstoneybrick,4),"g g"," l ","g g",'g',new ItemStack(ModBlocks.blockdecomposedgranite),'l',new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
+GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockblocky,2),new ItemStack(ModBlocks.blocksmoothrock),new ItemStack(Blocks.cobblestone),new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
+GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockredstone,3),new ItemStack(ModBlocks.blocksmoothrock),new ItemStack(Blocks.cobblestone),new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE),new ItemStack(Blocks.redstone_block));
+GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockskystone,2),new ItemStack(ModBlocks.BlockSapphire),new ItemStack(Blocks.cobblestone),new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
+GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockpillar,2),new ItemStack(ModBlocks.BlockSapphire),new ItemStack(Blocks.stone),new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
+GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockquartzstone,2),new ItemStack(ModBlocks.blocksmoothrock),new ItemStack(Blocks.quartz_block),new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
+GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockglowingbeacon,2),new ItemStack(ModBlocks.BlockSapphire),new ItemStack(Blocks.glass),new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
+GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockoakpanel,2),new ItemStack(Blocks.wooden_pressure_plate),new ItemStack(Blocks.spruce_stairs),new ItemStack(ModItems.Itemwoodmallet, 1, OreDictionary.WILDCARD_VALUE));
 
 
 }

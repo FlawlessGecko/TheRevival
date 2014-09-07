@@ -26,6 +26,16 @@ tile.therevival:blockblackstonepillar.name=Blackstone Pillar
 tile.therevival:blockironcover.name=Block Iron Cover Wip
 tile.therevival:blockcrushedcobble.name=Crushed Cobble
 tile.therevival:blockdecomposedcobble.name=Decomposed Cobble
+tile.therevival:blockredstone.name=Red Cobble  Stone
+tile.therevival:blockblockystone.name=Gray Cobble Stone
+tile.therevival:blockskystone.name=Sky Stone
+tile.therevival:blockpillar.name=BrightStone Pillar
+tile.therevival:blockglowingbeacon.name=Glowing Beacon
+tile.therevival:blockquartzstone.name=Quartz Stone
+tile.therevival:blockoakpanel.name=Oak Panel
+tile.therevival:blockblocky.name=Gray Cobble Stone
+tile.therevival:blockblackendoak.name=Blackend oak
+
 //items
 item.therevival:leafpoker.name=Leaf Poker
 item.therevival:jasper.name=Jasper

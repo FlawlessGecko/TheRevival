@@ -1,29 +1,27 @@
 package com.FlawlessGecko.TheRevival.block;
 
-import java.util.Random;
+import net.minecraft.block.material.Material;
+import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.FlawlessGecko.TheRevival.creativetab.CreativeTabTR;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
 
-public class BlockLamp extends BlockTR {
+public class blockglowingbeacon extends BlockTR {
 
-	public BlockLamp( ) {
+	public blockglowingbeacon( ) {
 		super(Material.glass);
 
-		this.setBlockName("blocklamp");
+		this.setBlockName("blockglowingbeacon");
 		this.setHardness(9);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setStepSound(soundTypeGlass);
 		this.setTickRandomly(true);
-		this.setBlockTextureName("blocklamp");
+		this.setBlockTextureName("blockglowingbeacon");
 		this.setLightLevel(1f);
+		
 		
 		
 	}
