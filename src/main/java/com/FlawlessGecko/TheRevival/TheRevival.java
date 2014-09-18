@@ -1,10 +1,10 @@
 package com.FlawlessGecko.TheRevival;
 
 import com.FlawlessGecko.TheRevival.Gen.BlocksGenerator;
-import com.FlawlessGecko.TheRevival.block.BlockBlackstone;
-import com.FlawlessGecko.TheRevival.block.BlockLamp;
-import com.FlawlessGecko.TheRevival.block.Blockstone;
-import com.FlawlessGecko.TheRevival.block.Blocktile;
+import com.FlawlessGecko.TheRevival.block.craftable.BlockLamp;
+import com.FlawlessGecko.TheRevival.block.craftable.Blocktile;
+import com.FlawlessGecko.TheRevival.block.gen.BlockBlackstone;
+import com.FlawlessGecko.TheRevival.block.gen.Blockstone;
 import com.FlawlessGecko.TheRevival.handler.ConfigurationHandler;
 import com.FlawlessGecko.TheRevival.init.ModBlocks;
 import com.FlawlessGecko.TheRevival.init.ModItems;
@@ -84,9 +84,9 @@ public class TheRevival {
 		LogHelper.info("Post Initialization Complete");
 		//gets all names of currenly register blocks
 		
-		/*for(String oreName : OreDictionary.getOreNames()){
+		for(String oreName : OreDictionary.getOreNames()){
 			LogHelper.info(oreName);
 		}
-		*/
+		
 	}
 }

@@ -45,6 +45,7 @@ public class BlocksGenerator implements IWorldGenerator
         this.Add(ModBlocks.blocksapphireore, world, random, x, z, 16, 16, 4 + random.nextInt(8), 5, 15, 50);
         this.Add(ModBlocks.blockdecomposedgranite, world, random, x, z, 16, 16, 4 + random.nextInt(15), 5, 15, 50);
         this.Add(ModBlocks.blocksmoothrock, world, random, x, z, 16, 16, 4 + random.nextInt(25), 5, 15, 50);
+   
     }
  
     private void generateNether(World world, Random random, int x, int z)

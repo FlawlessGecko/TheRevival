@@ -1,6 +1,4 @@
 itemGroup.Revival=The Revival
-tile.Granite.name=Granite
-tile.therivival:blockglass.name=Natural Glass
 tile.therevival:blockblackstone.name=Black Marble
 tile.therevival:blocklamp.name=Swamp Light
 tile.therevival:blocktile.name=Tile floor
@@ -35,12 +33,17 @@ tile.therevival:blockquartzstone.name=Quartz Stone
 tile.therevival:blockoakpanel.name=Oak Panel
 tile.therevival:blockblocky.name=Gray Cobble Stone
 tile.therevival:blockblackendoak.name=Blackend oak
+tile.therevival:blocksteel.name=Block of Steel
+tile.therevival:blockhotsteel.name=Molten Steel
+tile.therevival:blockbluesparkles.name=Sapphire Lamp
 
 //items
 item.therevival:leafpoker.name=Leaf Poker
 item.therevival:jasper.name=Jasper
 item.therevival:sapphire.name=Sapphire
 item.therevival:woodmallet.name=Wood mallet 
+item.therevival:ironmallet.name=Iron mallet 
 
 
+//Creative tab
 itemGroup.therevival=The Revival

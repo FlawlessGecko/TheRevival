@@ -7,6 +7,8 @@ public class ClientProxy extends CommonProxy {
 
 	
 
+	public static int manualGuiID;
+
 	@Override
 	public void registerRenderThings() {
 		

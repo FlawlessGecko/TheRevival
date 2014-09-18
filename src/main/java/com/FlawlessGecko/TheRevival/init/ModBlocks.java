@@ -1,40 +1,42 @@
 package com.FlawlessGecko.TheRevival.init;
 
-import com.FlawlessGecko.TheRevival.block.BlockBlackstone;
-import com.FlawlessGecko.TheRevival.block.BlockBrick;
-import com.FlawlessGecko.TheRevival.block.BlockJasperore;
-import com.FlawlessGecko.TheRevival.block.BlockLamp;
-import com.FlawlessGecko.TheRevival.block.BlockLampStone;
-import com.FlawlessGecko.TheRevival.block.BlockLampWood;
-import com.FlawlessGecko.TheRevival.block.BlockLeather;
-import com.FlawlessGecko.TheRevival.block.BlockSapphire;
 import com.FlawlessGecko.TheRevival.block.BlockTR;
-import com.FlawlessGecko.TheRevival.block.BlockZombieFlesh;
-import com.FlawlessGecko.TheRevival.block.Blockdecomposedcobble;
-import com.FlawlessGecko.TheRevival.block.Blockgrass;
-import com.FlawlessGecko.TheRevival.block.Blockironcover;
-import com.FlawlessGecko.TheRevival.block.Blockstone;
-import com.FlawlessGecko.TheRevival.block.Blockstoneybrick;
-import com.FlawlessGecko.TheRevival.block.Blocktile;
-import com.FlawlessGecko.TheRevival.block.Blockwoodpaver;
-import com.FlawlessGecko.TheRevival.block.blockPaver;
-import com.FlawlessGecko.TheRevival.block.blockblackendoak;
-import com.FlawlessGecko.TheRevival.block.blockblackstonepillar;
-import com.FlawlessGecko.TheRevival.block.blockblocky;
-import com.FlawlessGecko.TheRevival.block.blockbluesparkles;
-import com.FlawlessGecko.TheRevival.block.blockclaypaver;
-import com.FlawlessGecko.TheRevival.block.blockcrushedcobble;
-import com.FlawlessGecko.TheRevival.block.blockdecomposedgranite;
-import com.FlawlessGecko.TheRevival.block.blockglowingbeacon;
-import com.FlawlessGecko.TheRevival.block.blockironpaver;
-import com.FlawlessGecko.TheRevival.block.blockoakpanel;
-import com.FlawlessGecko.TheRevival.block.blockpillar;
-import com.FlawlessGecko.TheRevival.block.blockquartzpaver;
-import com.FlawlessGecko.TheRevival.block.blockquartzstone;
-import com.FlawlessGecko.TheRevival.block.blockredstone;
-import com.FlawlessGecko.TheRevival.block.blocksapphireore;
-import com.FlawlessGecko.TheRevival.block.blockskystone;
-import com.FlawlessGecko.TheRevival.block.blocksmoothrock;
+import com.FlawlessGecko.TheRevival.block.Pavers.Blockironcover;
+import com.FlawlessGecko.TheRevival.block.Pavers.Blockwoodpaver;
+import com.FlawlessGecko.TheRevival.block.Pavers.blockPaver;
+import com.FlawlessGecko.TheRevival.block.Pavers.blockclaypaver;
+import com.FlawlessGecko.TheRevival.block.Pavers.blockironpaver;
+import com.FlawlessGecko.TheRevival.block.Pavers.blockoakpanel;
+import com.FlawlessGecko.TheRevival.block.Pavers.blockquartzpaver;
+import com.FlawlessGecko.TheRevival.block.craftable.BlockBrick;
+import com.FlawlessGecko.TheRevival.block.craftable.BlockLamp;
+import com.FlawlessGecko.TheRevival.block.craftable.BlockLampStone;
+import com.FlawlessGecko.TheRevival.block.craftable.BlockLampWood;
+import com.FlawlessGecko.TheRevival.block.craftable.BlockLeather;
+import com.FlawlessGecko.TheRevival.block.craftable.BlockSapphire;
+import com.FlawlessGecko.TheRevival.block.craftable.BlockZombieFlesh;
+import com.FlawlessGecko.TheRevival.block.craftable.Blockdecomposedcobble;
+import com.FlawlessGecko.TheRevival.block.craftable.Blockgrass;
+import com.FlawlessGecko.TheRevival.block.craftable.Blockstoneybrick;
+import com.FlawlessGecko.TheRevival.block.craftable.Blocktile;
+import com.FlawlessGecko.TheRevival.block.craftable.blockblackendoak;
+import com.FlawlessGecko.TheRevival.block.craftable.blockblocky;
+import com.FlawlessGecko.TheRevival.block.craftable.blockbluesparkles;
+import com.FlawlessGecko.TheRevival.block.craftable.blockcrushedcobble;
+import com.FlawlessGecko.TheRevival.block.craftable.blockglowingbeacon;
+import com.FlawlessGecko.TheRevival.block.craftable.blockhotsteel;
+import com.FlawlessGecko.TheRevival.block.craftable.blockquartzstone;
+import com.FlawlessGecko.TheRevival.block.craftable.blockredstone;
+import com.FlawlessGecko.TheRevival.block.craftable.blockskystone;
+import com.FlawlessGecko.TheRevival.block.craftable.blocksteel;
+import com.FlawlessGecko.TheRevival.block.gen.BlockBlackstone;
+import com.FlawlessGecko.TheRevival.block.gen.BlockJasperore;
+import com.FlawlessGecko.TheRevival.block.gen.Blockstone;
+import com.FlawlessGecko.TheRevival.block.gen.blockdecomposedgranite;
+import com.FlawlessGecko.TheRevival.block.gen.blocksapphireore;
+import com.FlawlessGecko.TheRevival.block.gen.blocksmoothrock;
+import com.FlawlessGecko.TheRevival.block.pillars.blockblackstonepillar;
+import com.FlawlessGecko.TheRevival.block.pillars.blockpillar;
 import com.FlawlessGecko.TheRevival.reference.Reference;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -76,6 +78,9 @@ public class ModBlocks {
 	public static final BlockTR blockoakpanel= new blockoakpanel();
 	public static final BlockTR blockblackendoak= new blockblackendoak(); 
 	public static final BlockTR blockbluesparkles=new blockbluesparkles();
+	public static final BlockTR blocksteel=new blocksteel();
+	public static final BlockTR blockhotsteel=new blockhotsteel();
+
 	//Init is where we store our blocks
 	public static void init(){
 		GameRegistry.registerBlock(blockblackstonepillar, "blockblackstonepillar");
@@ -112,5 +117,8 @@ public class ModBlocks {
 		GameRegistry.registerBlock(blockoakpanel, "bloakoakpanel");
 		GameRegistry.registerBlock(blockblackendoak, "blockblackendoak");
 		GameRegistry.registerBlock(blockbluesparkles, "blockbluesparkles");
+		GameRegistry.registerBlock(blocksteel, "blocksteel");
+		GameRegistry.registerBlock(blockhotsteel, "blockhotsteel");
+
 	}
 }
