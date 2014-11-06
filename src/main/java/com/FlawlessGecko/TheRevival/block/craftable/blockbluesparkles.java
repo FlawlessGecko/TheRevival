@@ -6,7 +6,7 @@ public class blockbluesparkles extends BlockTR {
 public blockbluesparkles(){
 	this.setBlockName("blockbluesparkles");
 	this.setBlockTextureName("blockbluesparkles");
-	this.setStepSound(soundTypeStone);
+	this.setStepSound(soundTypeGlass);
 	this.setHardness(11);
 	this.setLightLevel(1);
 	this.setLightOpacity(1);
