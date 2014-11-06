@@ -1,28 +1,22 @@
 package com.FlawlessGecko.TheRevival;
 
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemSeeds;
+import net.minecraftforge.oredict.OreDictionary;
+
 import com.FlawlessGecko.TheRevival.Gen.BlocksGenerator;
-import com.FlawlessGecko.TheRevival.block.craftable.BlockLamp;
-import com.FlawlessGecko.TheRevival.block.craftable.Blocktile;
-import com.FlawlessGecko.TheRevival.block.gen.BlockBlackstone;
-import com.FlawlessGecko.TheRevival.block.gen.Blockstone;
+import com.FlawlessGecko.TheRevival.block.BlockCatsEyeCrops;
 import com.FlawlessGecko.TheRevival.handler.ConfigurationHandler;
+import com.FlawlessGecko.TheRevival.handler.TRFuelHandler;
 import com.FlawlessGecko.TheRevival.init.ModBlocks;
 import com.FlawlessGecko.TheRevival.init.ModItems;
 import com.FlawlessGecko.TheRevival.init.Recipes;
-import com.FlawlessGecko.TheRevival.proxy.ClientProxy;
 import com.FlawlessGecko.TheRevival.proxy.IProxy;
 import com.FlawlessGecko.TheRevival.reference.Reference;
 import com.FlawlessGecko.TheRevival.utility.LogHelper;
 
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -49,7 +43,8 @@ public class TheRevival {
 	//IProxy is a way we can Controls where and when the other Proxys are used
 	// Like do we need blocks to render on client side.
 	public static IProxy proxy;
-	
+	public static BlockCatsEyeCrops RecipeBlockCrops =new BlockCatsEyeCrops();
+
 	public static BlocksGenerator worldGen = new BlocksGenerator();
 	
 	//Registration of Blocks and Items.Also network.
@@ -63,19 +58,20 @@ public class TheRevival {
 		proxy.registerRenderThings();
 		ModItems.init();
 		ModBlocks.init();
-		
+
 		
 		//move these to ModBlocks
 		
 		GameRegistry.registerWorldGenerator(worldGen, 1);
-		
 	}
 	//Gui and handlers
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event){
+		GameRegistry.registerBlock(RecipeBlockCrops, "RecipeBlockCrops");
 		Recipes.init();
 		LogHelper.info("Initialization Complete");
-		
+		GameRegistry.registerFuelHandler(new TRFuelHandler());
+
 	}
 	// wrap up and checking after other Mods have loaded.
 	@Mod.EventHandler
@@ -84,9 +80,9 @@ public class TheRevival {
 		LogHelper.info("Post Initialization Complete");
 		//gets all names of currenly register blocks
 		
-		for(String oreName : OreDictionary.getOreNames()){
-			LogHelper.info(oreName);
+		//for(String oreName : OreDictionary.getOreNames()){
+			//LogHelper.info(oreName);
 		}
 		
 	}
-}
+//}

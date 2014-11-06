@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class blockblackstonepillar extends BlockTR {
+public class blockblackstonepillar extends BlockTR  {
 private World world;
 @SideOnly(Side.CLIENT)
 private IIcon sideicon;

@@ -9,12 +9,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 
-public class BlockTR extends Block {
+public class BlockTR extends Block  {
 
 	public BlockTR(Material material) {
 		super(material);
 		this.setCreativeTab(CreativeTabTR.TR_TAB);
+	
 		
 	}
 	 @Override

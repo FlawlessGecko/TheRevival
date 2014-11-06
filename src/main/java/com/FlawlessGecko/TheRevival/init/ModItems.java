@@ -1,5 +1,9 @@
 package com.FlawlessGecko.TheRevival.init;
 
+import net.minecraft.block.Block;
+
+import com.FlawlessGecko.TheRevival.TheRevival;
+import com.FlawlessGecko.TheRevival.item.ItemCatsEyeSeeds;
 import com.FlawlessGecko.TheRevival.item.ItemSapphire;
 import com.FlawlessGecko.TheRevival.item.ItemTR;
 import com.FlawlessGecko.TheRevival.item.Itemironmallet;
@@ -16,15 +20,14 @@ public static final ItemTR jasper = new Itemjasper();
 public static final ItemTR sapphire = new ItemSapphire();
 public static final ItemTR Itemwoodmallet = new Itemwoodmallet();
 public static final ItemTR Itemironmallet = new Itemironmallet();
-
-
+public static final ItemTR ItemCatsEyeSeeds=new ItemCatsEyeSeeds();
 //This is Where we register our new blocks
 public static void init(){
 	GameRegistry.registerItem(jasper, "jasper");
 	GameRegistry.registerItem(sapphire, "sapphire");
 	GameRegistry.registerItem(Itemwoodmallet, "Itemwoodmallet");
 	GameRegistry.registerItem(Itemironmallet, "Itemironmallet");
-
+	GameRegistry.registerItem(ItemCatsEyeSeeds, "ItemCatsEyeSeeds");
 	
 }
 }

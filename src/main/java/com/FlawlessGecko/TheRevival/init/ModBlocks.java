@@ -1,7 +1,6 @@
 package com.FlawlessGecko.TheRevival.init;
 
 import com.FlawlessGecko.TheRevival.block.BlockTR;
-import com.FlawlessGecko.TheRevival.block.Pavers.Blockironcover;
 import com.FlawlessGecko.TheRevival.block.Pavers.Blockwoodpaver;
 import com.FlawlessGecko.TheRevival.block.Pavers.blockPaver;
 import com.FlawlessGecko.TheRevival.block.Pavers.blockclaypaver;
@@ -17,6 +16,7 @@ import com.FlawlessGecko.TheRevival.block.craftable.BlockSapphire;
 import com.FlawlessGecko.TheRevival.block.craftable.BlockZombieFlesh;
 import com.FlawlessGecko.TheRevival.block.craftable.Blockdecomposedcobble;
 import com.FlawlessGecko.TheRevival.block.craftable.Blockgrass;
+import com.FlawlessGecko.TheRevival.block.craftable.BlockofBones;
 import com.FlawlessGecko.TheRevival.block.craftable.Blockstoneybrick;
 import com.FlawlessGecko.TheRevival.block.craftable.Blocktile;
 import com.FlawlessGecko.TheRevival.block.craftable.blockblackendoak;
@@ -61,7 +61,6 @@ public class ModBlocks {
 	public static final BlockTR blockdecomposedcobble=new Blockdecomposedcobble();
 	public static final BlockTR blockcrushedcobble=new blockcrushedcobble();
 	public static final BlockTR blockblackstonepillar=new blockblackstonepillar();
-	public static final BlockTR blockironcover=new Blockironcover();
 	public static final BlockTR blockdecomposedgranite= new blockdecomposedgranite();
 	public static final BlockTR blocksapphireore=new blocksapphireore();
 	public static final BlockTR blocksmoothrock=new blocksmoothrock();
@@ -80,6 +79,8 @@ public class ModBlocks {
 	public static final BlockTR blockbluesparkles=new blockbluesparkles();
 	public static final BlockTR blocksteel=new blocksteel();
 	public static final BlockTR blockhotsteel=new blockhotsteel();
+	public static final BlockTR blockofbones=new BlockofBones();
+
 
 	//Init is where we store our blocks
 	public static void init(){
@@ -89,7 +90,6 @@ public class ModBlocks {
 		GameRegistry.registerBlock(blockwoodpaver, "blockwoodpaver");
 		GameRegistry.registerBlock(blockironpaver, "blockironpaver");
 		GameRegistry.registerBlock(blockquartzpaver, "blockquartzpaver");
-		GameRegistry.registerBlock(blockironcover, "blockironcover");
 		GameRegistry.registerBlock(blockdecomposedcobble, "blockdecomposedcobble");
 		GameRegistry.registerBlock(blockblackstone, "blockblackstone");
 		GameRegistry.registerBlock(blockstone, "blockstone");
@@ -119,6 +119,7 @@ public class ModBlocks {
 		GameRegistry.registerBlock(blockbluesparkles, "blockbluesparkles");
 		GameRegistry.registerBlock(blocksteel, "blocksteel");
 		GameRegistry.registerBlock(blockhotsteel, "blockhotsteel");
+		GameRegistry.registerBlock(blockofbones,"blockofbones");
 
 	}
 }

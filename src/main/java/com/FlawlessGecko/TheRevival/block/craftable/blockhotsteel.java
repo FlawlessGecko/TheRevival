@@ -1,9 +1,16 @@
 package com.FlawlessGecko.TheRevival.block.craftable;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.FlawlessGecko.TheRevival.block.BlockTR;
 import com.FlawlessGecko.TheRevival.creativetab.CreativeTabTR;
+import com.FlawlessGecko.TheRevival.init.ModBlocks;
 
 
 public class blockhotsteel extends BlockTR {
@@ -24,5 +31,8 @@ public class blockhotsteel extends BlockTR {
     {
         return false;
     }
-
+	public Block onBlockPlacedBy(World world, EntityPlayer player, ItemStack stack, int x, int y, int z, ForgeDirection side, float hitX, float hitY, float hitZ, int meta) {
+		return ModBlocks.blocksteel;
 	}
+
+}

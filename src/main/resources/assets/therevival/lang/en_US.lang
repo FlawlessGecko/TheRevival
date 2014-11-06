@@ -36,6 +36,7 @@ tile.therevival:blockblackendoak.name=Blackend oak
 tile.therevival:blocksteel.name=Block of Steel
 tile.therevival:blockhotsteel.name=Molten Steel
 tile.therevival:blockbluesparkles.name=Sapphire Lamp
+tile.therevival:blockofbones.name=Block of Bones
 
 //items
 item.therevival:leafpoker.name=Leaf Poker

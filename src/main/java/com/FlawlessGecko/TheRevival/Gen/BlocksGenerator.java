@@ -30,10 +30,11 @@ public class BlocksGenerator implements IWorldGenerator
             generateEnd(world, random, chunkX * 16, chunkZ * 16);
         }
     }
- 
+ //add custom end block for seeds and random effects
     private void generateEnd(World world, Random random, int x, int z)
     {
- 
+        this.Add(TheRevival.RecipeBlockCrops, world, random, x, z, 16, 16, 4 + random.nextInt(8), 40, 15, 50);
+
     }
  
     private void generateSurface(World world, Random random, int x, int z)

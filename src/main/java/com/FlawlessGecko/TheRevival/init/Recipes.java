@@ -25,8 +25,9 @@ GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockpaver,3),"e","e","e",'
 GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockclaypaver,3),"h","h","h",'h',new ItemStack(Items.brick));
 GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockironpaver,8),"j","j","j",'j',new ItemStack(Blocks.iron_block));
 GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockquartzpaver,8),"t","t","t",'t',new ItemStack(Blocks.quartz_block));
-GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockironcover,8),"yyy",'y',new ItemStack(Items.iron_ingot));
 
+//Non hammer or smelting
+GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.blockofbones,1),"bbb","bbb","bbb",'b',new ItemStack(Items.bone));
 
 //Here is the smelting recipes in mod
 GameRegistry.addSmelting(ModBlocks.blockoakpanel, new ItemStack (ModBlocks.blockblackendoak), 4);

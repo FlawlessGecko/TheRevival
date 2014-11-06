@@ -2,8 +2,12 @@ package com.FlawlessGecko.TheRevival.item;
 
 import java.util.List;
 
+import com.FlawlessGecko.TheRevival.TheRevival;
+import com.FlawlessGecko.TheRevival.reference.Reference;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -66,4 +70,13 @@ public class Itemironmallet extends ItemTR {
 	    	        
 	    	        return stack;
 	    	    }
-	    	}
+	    	    public void func_149828_a(World world, int x, int y, int z, int type)
+	    	    {
+	    	        world.playAuxSFX(1022, x, y, z, 0);
+	    	    }
+
+	    	    protected String getCraftSound(){
+	    	    	return Reference.MOD_ID+"craft-iron";
+	    	    }
+
+}
