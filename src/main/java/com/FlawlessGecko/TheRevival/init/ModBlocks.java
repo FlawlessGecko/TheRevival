@@ -31,6 +31,7 @@ import com.FlawlessGecko.TheRevival.block.craftable.blockskystone;
 import com.FlawlessGecko.TheRevival.block.craftable.blocksteel;
 import com.FlawlessGecko.TheRevival.block.gen.BlockBlackstone;
 import com.FlawlessGecko.TheRevival.block.gen.BlockJasperore;
+import com.FlawlessGecko.TheRevival.block.gen.BlockNetherStone;
 import com.FlawlessGecko.TheRevival.block.gen.Blockstone;
 import com.FlawlessGecko.TheRevival.block.gen.blockdecomposedgranite;
 import com.FlawlessGecko.TheRevival.block.gen.blocksapphireore;
@@ -80,6 +81,7 @@ public class ModBlocks {
 	public static final BlockTR blocksteel=new blocksteel();
 	public static final BlockTR blockhotsteel=new blockhotsteel();
 	public static final BlockTR blockofbones=new BlockofBones();
+	public static final BlockTR blocknetherstone=new BlockNetherStone();
 
 
 	//Init is where we store our blocks
@@ -120,6 +122,7 @@ public class ModBlocks {
 		GameRegistry.registerBlock(blocksteel, "blocksteel");
 		GameRegistry.registerBlock(blockhotsteel, "blockhotsteel");
 		GameRegistry.registerBlock(blockofbones,"blockofbones");
+		GameRegistry.registerBlock(blocknetherstone, "blocknetherstone");
 
 	}
 }

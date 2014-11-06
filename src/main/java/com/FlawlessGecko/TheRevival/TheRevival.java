@@ -5,7 +5,7 @@ import net.minecraft.item.ItemSeeds;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.FlawlessGecko.TheRevival.Gen.BlocksGenerator;
-import com.FlawlessGecko.TheRevival.block.BlockCatsEyeCrops;
+import com.FlawlessGecko.TheRevival.block.gen.BlockCatsEyeCrops;
 import com.FlawlessGecko.TheRevival.handler.ConfigurationHandler;
 import com.FlawlessGecko.TheRevival.handler.TRFuelHandler;
 import com.FlawlessGecko.TheRevival.init.ModBlocks;
@@ -25,10 +25,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID,name =Reference.MOD_NAME,version = Reference.VERSION,guiFactory =Reference.GUI_FACTORY_CLASS)
 public class TheRevival {
-	//nbt stores our data for itemstack like enchant/damage/name tags/books
-	//items stack store the nbt data //named binary tag
-	//nbt stroes extra data like itemstack
-	//nbt Read and writes from disk
+
 	
 	//Where you find your reference to Mod.
 	@Mod.Instance(Reference.MOD_ID) 

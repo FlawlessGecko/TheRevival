@@ -19,7 +19,6 @@ public class BlockBlackstone extends BlockTR {
 		this.setHarvestLevel("pickaxe", 1);
 		this.setHardness(10);
 		this.setBlockTextureName("blockblackstone");
-		this.setBlockName("blockblackstone");
 	}
 
 	}
